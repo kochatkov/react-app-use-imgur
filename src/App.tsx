@@ -1,26 +1,42 @@
-import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import React, { useEffect, useState } from "react";
+// import { getDataFromServer, getPhotos } from "./api";
+import RecipeReviewCard from "./demo";
+import "./App.scss";
+
+const API_URL = 'https://pixabay.com/api/?key=18049814-e9719222073fd5b9704ba5084';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [photos, getPhotos] = useState([]);
+
+    useEffect(() => {
+        fetch(API_URL)
+        .then(res => res.json())
+            .then(data => {
+               const photos = Object.values(data)
+               // @ts-ignore
+                return getPhotos(photos[2]);
+            });
+    }, [])
+
+    console.log(photos)
+
+    return (
+        <div className="App">
+            {photos.length !== 0 ?
+                photos.map((photo: any) => (
+                    <RecipeReviewCard
+                        key={photo.id}
+                        // @ts-ignore
+                        userImage={photo.userImageURL}
+                        user={photo.user}
+                        preview={photo.previewURL}
+                        tags={photo.tags}
+                    />
+                )) : 'loading'
+            }
+
+        </div>
+    );
 }
 
 export default App;
