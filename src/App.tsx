@@ -26,11 +26,13 @@ function App() {
                 photos.map((photo: any) => (
                     <RecipeReviewCard
                         key={photo.id}
-                        // @ts-ignore
                         userImage={photo.userImageURL}
                         user={photo.user}
                         preview={photo.previewURL}
                         tags={photo.tags}
+                        favorites={photo.favorites}
+                        downloads={photo.downloads}
+                        comments={photo.comments}
                     />
                 )) : 'loading'
             }

@@ -3,16 +3,21 @@ html {
 }
 
 .App {
-  text-align: center;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  text-align: center;
   gap: 5px;
-  padding-top: 50px;
+  padding: 50px;
 
   &__img-block {
     background: gray;
     width: 100%;
     height: 200px;
+  }
+
+  &__favorites-text {
+    margin: 3px 0 0 5px;
   }
 }
 
