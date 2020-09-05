@@ -11,10 +11,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8504d740-ced1-4865-814b-49f4006cc022" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/ReviewCard.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.prettierrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.prettierrc.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/demo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/demo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/demo.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +26,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="JavaScript File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -53,6 +55,8 @@
     <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\projects\app-use-imgur\node_modules\prettier" />
+    <property name="run.prettier.on.save" value="true" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
     <property name="ts.external.directory.path" value="C:\projects\app-use-imgur\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
@@ -72,7 +76,15 @@
       <updated>1597683590491</updated>
       <workItem from="1597683619892" duration="3163000" />
       <workItem from="1598370297419" duration="13243000" />
-      <workItem from="1598502808103" duration="2971000" />
+      <workItem from="1598502808103" duration="3239000" />
+      <workItem from="1598633593958" duration="1483000" />
+      <workItem from="1598771044454" duration="42000" />
+      <workItem from="1598937101727" duration="6523000" />
+      <workItem from="1599021235282" duration="7919000" />
+      <workItem from="1599061175664" duration="3128000" />
+      <workItem from="1599111863394" duration="3110000" />
+      <workItem from="1599199829798" duration="3341000" />
+      <workItem from="1599285985292" duration="6346000" />
     </task>
     <servers />
   </component>
@@ -92,17 +104,25 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="551" y="275" key="#ESLint" timestamp="1598425155318">
+    <state x="551" y="275" key="#ESLint" timestamp="1598505972452">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="551" y="275" key="#ESLint/0.0.1366.728@0.0.1366.728" timestamp="1598425155318" />
+    <state x="551" y="275" key="#ESLint/0.0.1366.728@0.0.1366.728" timestamp="1598505972452" />
     <state x="430" y="166" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1597685180291">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="430" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1597685180291" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1598429453922">
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1599227748879">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1598429453922" />
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1599227748879" />
+    <state x="184" y="9" key="SettingsEditor" timestamp="1598633735944">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1598633735944" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1599290483082">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1599290483082" />
   </component>
 </project>

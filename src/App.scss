@@ -1,14 +1,40 @@
 html {
-  background: #282c34;
+  background: #fff;
+}
+
+.MuiCircularProgress-colorSecondary {
+  color: white !important;
 }
 
 .App {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  justify-items: center;
-  text-align: center;
-  gap: 5px;
   padding: 50px;
+
+  &__selects {
+    display: flex;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    text-align: center;
+    gap: 5px;
+    color: #fff;
+  }
+
+  &__button-container {
+    display: flex;
+    width: 100%;
+  }
+
+  &__load-more {
+    color: gray;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 20px auto;
+    outline: none;
+  }
 
   &__img-block {
     background: gray;
@@ -19,11 +45,15 @@ html {
   &__favorites-text {
     margin: 3px 0 0 5px;
   }
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  &__search {
+    height: 56px;
+    border: none;
+    border-bottom: 1px solid darkgray;
+    outline: none;
+    padding-top: 27px;
+    box-sizing: border-box;
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -45,6 +75,10 @@ html {
 
 .App-link {
   color: #61dafb;
+}
+
+.makeStyles-root-10 {
+  width: 100% !important;
 }
 
 @keyframes App-logo-spin {
