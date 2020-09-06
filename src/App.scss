@@ -1,0 +1,91 @@
+html {
+  background: #fff;
+}
+
+.MuiCircularProgress-colorSecondary {
+  color: white !important;
+}
+
+.App {
+  padding: 50px;
+
+  &__selects {
+    display: flex;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    text-align: center;
+    gap: 5px;
+    color: #fff;
+  }
+
+  &__button-container {
+    display: flex;
+    width: 100%;
+  }
+
+  &__load-more {
+    color: gray;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 20px auto;
+    outline: none;
+  }
+
+  &__img-block {
+    background: gray;
+    width: 100%;
+    height: 200px;
+  }
+
+  &__favorites-text {
+    margin: 3px 0 0 5px;
+  }
+
+  &__search {
+    height: 56px;
+    border: none;
+    border-bottom: 1px solid darkgray;
+    outline: none;
+    padding-top: 27px;
+    box-sizing: border-box;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.makeStyles-root-10 {
+  width: 100% !important;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
