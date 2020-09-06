@@ -61,12 +61,7 @@ const ReviewCard: React.FC<Props> = ({ photo }: Props) => {
         subheader={user}
       />
       <CardMedia className={classes.media} image={previewURL} title={tags} />
-      <CardContent>
-        <Typography variant="body2" color="textSecondary" component="p">
-          This impressive paella is a perfect party dish and a fun meal to cook together with your
-          guests. Add 1 cup of frozen peas along with the mussels, if you like.
-        </Typography>
-      </CardContent>
+
       <CardActions disableSpacing>
         <IconButton aria-label="add to favorites">
           <FavoriteIcon />

@@ -10,13 +10,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8504d740-ced1-4865-814b-49f4006cc022" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ReviewCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.prettierrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.prettierrc.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
+    <list default="true" id="8504d740-ced1-4865-814b-49f4006cc022" name="Default Changelist" comment="filterByImage and filterByType is ready">
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/demo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReviewCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReviewCard.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,8 +82,16 @@
       <workItem from="1599061175664" duration="3128000" />
       <workItem from="1599111863394" duration="3110000" />
       <workItem from="1599199829798" duration="3341000" />
-      <workItem from="1599285985292" duration="6346000" />
+      <workItem from="1599285985292" duration="11987000" />
     </task>
+    <task id="LOCAL-00001" summary="filterByImage and filterByType is ready">
+      <created>1599294376081</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1599294376095</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -103,11 +109,15 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="filterByImage and filterByType is ready" />
+    <option name="LAST_COMMIT_MESSAGE" value="filterByImage and filterByType is ready" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="551" y="275" key="#ESLint" timestamp="1598505972452">
+    <state x="551" y="275" key="#ESLint" timestamp="1599294660700">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="551" y="275" key="#ESLint/0.0.1366.728@0.0.1366.728" timestamp="1598505972452" />
+    <state x="551" y="275" key="#ESLint/0.0.1366.728@0.0.1366.728" timestamp="1599294660700" />
     <state x="430" y="166" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1597685180291">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
