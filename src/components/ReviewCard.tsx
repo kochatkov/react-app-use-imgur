@@ -13,7 +13,7 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 import Chat from '@material-ui/icons/Chat';
-import { Photo } from './Photo';
+import { Photo } from '../interfaces/Photo';
 
 const useStyles = makeStyles((theme) => ({
   root: {

@@ -1,50 +1,31 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import ReviewCard from './ReviewCard';
+import ReviewCard from './components/ReviewCard';
 import './App.scss';
-import { Photo, Data } from './Photo';
+import { Photo, Data } from './interfaces/Photo';
 import CircularIndeterminate from './Spinner';
-import CheckboxSelect from './CheckboxSelect';
-import MultipleSelect from './MultipleSelect';
+import CheckboxSelect from './components/CheckboxSelect';
+import MultipleSelect from './components/MultipleSelect';
 import debounce from 'lodash/debounce';
-
-const API_URL = 'https://pixabay.com/api/?key=18049814-e9719222073fd5b9704ba5084';
+import { getPhotos, GetPhotosOptions } from './api/pixabay';
 
 function App() {
   const [photos, setPhotos] = useState<Photo[]>([]);
-  const [count, setCount] = useState(2);
-  const [filteredPhotos, setFilteredPhotos] = React.useState<Photo[]>([]);
+  const [option, setOption] = useState<GetPhotosOptions>({ page: 1 });
 
   useEffect(() => {
-    fetch(API_URL)
-      .then((res) => res.json())
-      .then((data: Data) => setPhotos(data.hits));
+    getPhotos(option).then((data: Data) => setPhotos(data.hits));
   }, []);
 
-  useEffect(() => {
-    setFilteredPhotos([...photos]);
-  }, [photos]);
-
   const loadMore = () => {
-    let counter = count;
-    fetch(`${API_URL}/&page=${count}`)
-      .then((res) => res.json())
-      .then((data) => {
-        const morePhotos = [...photos, ...data.hits];
-        setPhotos(morePhotos);
-      });
-
-    counter++;
-    setCount(counter);
+    const newOption = { ...option, page: option.page + 1 };
+    setOption(newOption);
+    getPhotos(newOption).then((data) => setPhotos(data.hits));
   };
 
   const filterImageByCategory = (categories: string[]) => {
-    categories.map((category) => {
-      fetch(`${API_URL}/&category=${category}`)
-        .then((res) => res.json())
-        .then((data) => {
-          setPhotos(data.hits);
-        });
-    });
+    const newOption = { ...option, page: 1, category: categories.join(',') };
+    setOption(newOption);
+    getPhotos(newOption).then((data) => setPhotos(data.hits));
   };
 
   const updateSearchingApi = useCallback(
@@ -57,54 +38,32 @@ function App() {
   const searchingFilter = (e: React.ChangeEvent<{ value: string }>) => {
     const { value } = e.target;
 
-    if (value.length <= 100) {
-      fetch(`${API_URL}/&q=${value}`)
-        .then((res) => res.json())
-        .then((data) => {
-          updateSearchingApi(data.hits);
-        });
+    if (value.length > 100) {
+      return;
     }
+
+    const newOption = { ...option, page: 1, q: value };
+    setOption(newOption);
+    getPhotos(newOption).then((data) => setPhotos(data.hits));
   };
 
   const filterImageByType = (types: string[]) => {
-    types.map((type: string) => {
-      switch (type) {
-        case 'photo':
-          setFilteredPhotos([...photos].filter((photo) => photo.type === 'photo'));
-          break;
-        case 'illustration':
-          setFilteredPhotos([...photos].filter((photo) => photo.type === 'illustration'));
-          break;
-        case 'vector':
-          setFilteredPhotos([...photos].filter((photo) => photo.type === 'vector'));
-          break;
-        default:
-          setFilteredPhotos([...photos]);
-      }
-    });
+    // eslint-disable-next-line @typescript-eslint/camelcase
+    const newOption = { ...option, page: 1, image_type: types.join(',') };
+    setOption(newOption);
+    getPhotos(newOption).then((data) => setPhotos(data.hits));
   };
 
   return (
     <div className="App">
       <div className="App__selects">
-        <CheckboxSelect
-          // @ts-ignore
-          filterImageByType={filterImageByType}
-        />
-        <MultipleSelect
-          // @ts-ignore
-          filterImageByCategory={filterImageByCategory}
-        />
-        <input
-          type="text"
-          className="App__search"
-          // @ts-ignore
-          onChange={searchingFilter}
-        />
+        <CheckboxSelect filterImageByType={filterImageByType} />
+        <MultipleSelect filterImageByCategory={filterImageByCategory} />
+        <input type="text" className="App__search" onChange={searchingFilter} />
       </div>
       <div className="App__cards">
-        {filteredPhotos.length !== 0 ? (
-          filteredPhotos.map((photo) => <ReviewCard key={photo.id} photo={photo} />)
+        {photos.length !== 0 ? (
+          photos.map((photo) => <ReviewCard key={photo.id} photo={photo} />)
         ) : (
           <CircularIndeterminate />
         )}

@@ -1,10 +1,15 @@
 import React from 'react';
-import { createStyles, makeStyles, useTheme, Theme } from '@material-ui/core/styles';
-import Input from '@material-ui/core/Input';
-import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
-import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
+import {
+  createStyles,
+  makeStyles,
+  useTheme,
+  Theme,
+  Input,
+  InputLabel,
+  MenuItem,
+  FormControl,
+  Select,
+} from '@material-ui/core';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -69,38 +74,39 @@ function getStyles(name: string, personName: string[], theme: Theme) {
   };
 }
 
-// @ts-ignore
-const MultipleSelect = ({ filterImageByCategory }) => {
+interface Props {
+  filterImageByCategory: (value: string[]) => void;
+}
+
+const MultipleSelect: React.FC<Props> = ({ filterImageByCategory }: Props) => {
   const classes = useStyles();
   const theme = useTheme();
   const [personName, setPersonName] = React.useState<string[]>([]);
 
-  const handleChange = (event: React.ChangeEvent<{ value: unknown }>) => {
-    setPersonName(event.target.value as string[]);
-    filterImageByCategory(event.target.value);
+  const handleChange = (value: string[]) => {
+    setPersonName(value);
+    filterImageByCategory(value);
   };
 
   return (
-    <div>
-      <FormControl className={classes.formControl}>
-        <InputLabel id="demo-mutiple-name-label">Name</InputLabel>
-        <Select
-          labelId="demo-mutiple-name-label"
-          id="demo-mutiple-name"
-          multiple
-          value={personName}
-          onChange={handleChange}
-          input={<Input />}
-          MenuProps={MenuProps}
-        >
-          {names.map((name) => (
-            <MenuItem key={name} value={name} style={getStyles(name, personName, theme)}>
-              {name}
-            </MenuItem>
-          ))}
-        </Select>
-      </FormControl>
-    </div>
+    <FormControl className={classes.formControl}>
+      <InputLabel id="demo-mutiple-name-label">Name</InputLabel>
+      <Select
+        labelId="demo-mutiple-name-label"
+        id="demo-mutiple-name"
+        multiple
+        value={personName}
+        onChange={(e) => handleChange(e.target.value as string[])}
+        input={<Input />}
+        MenuProps={MenuProps}
+      >
+        {names.map((name) => (
+          <MenuItem key={name} value={name} style={getStyles(name, personName, theme)}>
+            {name}
+          </MenuItem>
+        ))}
+      </Select>
+    </FormControl>
   );
 };
 

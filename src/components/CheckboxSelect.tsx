@@ -1,13 +1,15 @@
-import React, { SetStateAction } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Input from '@material-ui/core/Input';
-import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
-import FormControl from '@material-ui/core/FormControl';
-import ListItemText from '@material-ui/core/ListItemText';
-import Select from '@material-ui/core/Select';
-import Checkbox from '@material-ui/core/Checkbox';
-import { Photo } from './Photo';
+import React from 'react';
+import {
+  makeStyles,
+  Input,
+  InputLabel,
+  MenuItem,
+  FormControl,
+  ListItemText,
+  Select,
+  Checkbox,
+} from '@material-ui/core';
+import { Photo } from '../interfaces/Photo';
 
 const useStyles = makeStyles((theme) => ({
   formControl: {
@@ -41,17 +43,16 @@ const MenuProps = {
 const names = ['all', 'photo', 'illustration', 'vector'];
 
 interface Props {
-  filterImageByType: (value: unknown) => void;
+  filterImageByType: (value: string[]) => void;
 }
 
-// @ts-ignore
 const CheckboxSelect: React.FC<Props> = ({ filterImageByType }: Props) => {
   const classes = useStyles();
   const [imageType, setImageType] = React.useState<string[]>([]);
 
-  const handleChange = (event: React.ChangeEvent<{ value: unknown }>) => {
-    setImageType(event.target.value as string[]);
-    filterImageByType(event.target.value);
+  const handleChange = (value: string[]) => {
+    setImageType(value);
+    filterImageByType(value);
   };
 
   return (
@@ -63,7 +64,7 @@ const CheckboxSelect: React.FC<Props> = ({ filterImageByType }: Props) => {
           id="demo-mutiple-checkbox"
           multiple
           value={imageType}
-          onChange={handleChange}
+          onChange={(e) => handleChange(e.target.value as string[])}
           input={<Input />}
           renderValue={(selected) => (selected as string[]).join(', ')}
           MenuProps={MenuProps}
