@@ -76,9 +76,10 @@ function getStyles(name: string, personName: string[], theme: Theme) {
 
 interface Props {
   filterImageByCategory: (value: string[]) => void;
+  disabled: boolean;
 }
 
-const MultipleSelect: React.FC<Props> = ({ filterImageByCategory }: Props) => {
+const MultipleSelect: React.FC<Props> = ({ filterImageByCategory, disabled }: Props) => {
   const classes = useStyles();
   const theme = useTheme();
   const [personName, setPersonName] = React.useState<string[]>([]);
@@ -99,6 +100,7 @@ const MultipleSelect: React.FC<Props> = ({ filterImageByCategory }: Props) => {
         onChange={(e) => handleChange(e.target.value as string[])}
         input={<Input />}
         MenuProps={MenuProps}
+        disabled={disabled}
       >
         {names.map((name) => (
           <MenuItem key={name} value={name} style={getStyles(name, personName, theme)}>

@@ -44,9 +44,10 @@ const names = ['all', 'photo', 'illustration', 'vector'];
 
 interface Props {
   filterImageByType: (value: string[]) => void;
+  disabled: boolean;
 }
 
-const CheckboxSelect: React.FC<Props> = ({ filterImageByType }: Props) => {
+const CheckboxSelect: React.FC<Props> = ({ filterImageByType, disabled }: Props) => {
   const classes = useStyles();
   const [imageType, setImageType] = React.useState<string[]>([]);
 
@@ -68,6 +69,7 @@ const CheckboxSelect: React.FC<Props> = ({ filterImageByType }: Props) => {
           input={<Input />}
           renderValue={(selected) => (selected as string[]).join(', ')}
           MenuProps={MenuProps}
+          disabled={disabled}
         >
           {names.map((name) => (
             <MenuItem key={name} value={name}>

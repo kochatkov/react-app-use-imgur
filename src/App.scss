@@ -3,7 +3,12 @@ html {
 }
 
 .MuiCircularProgress-colorSecondary {
-  color: white !important;
+  color: gray !important;
+}
+
+.makeStyles-root-9 {
+  justify-content: center;
+  margin: 40px 0;
 }
 
 .App {
@@ -18,7 +23,7 @@ html {
     grid-template-columns: repeat(4, 1fr);
     justify-items: center;
     text-align: center;
-    gap: 5px;
+    gap: 20px;
     color: #fff;
   }
 
@@ -32,7 +37,7 @@ html {
     background: none;
     border: none;
     cursor: pointer;
-    margin: 20px auto;
+    margin: 50px auto;
     outline: none;
   }
 

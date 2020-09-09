@@ -10,16 +10,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8504d740-ced1-4865-814b-49f4006cc022" name="Default Changelist" comment="filterByImage and filterByType is ready&#10;searching is ready">
+    <list default="true" id="8504d740-ced1-4865-814b-49f4006cc022" name="Default Changelist" comment="filters is ready for review&#10;&#10;fix typescript bugs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CheckboxSelect.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CheckboxSelect.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MultipleSelect.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MultipleSelect.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Photo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/Photo.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReviewCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ReviewCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/logo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CheckboxSelect.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CheckboxSelect.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MultipleSelect.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MultipleSelect.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +45,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../partner.tips-mart.com" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -91,7 +87,8 @@
       <workItem from="1599111863394" duration="3110000" />
       <workItem from="1599199829798" duration="3341000" />
       <workItem from="1599285985292" duration="16030000" />
-      <workItem from="1599543513217" duration="5378000" />
+      <workItem from="1599543513217" duration="5489000" />
+      <workItem from="1599631616744" duration="5785000" />
     </task>
     <task id="LOCAL-00001" summary="filterByImage and filterByType is ready">
       <created>1599294376081</created>
@@ -107,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599379605278</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="filters is ready for review&#10;&#10;fix typescript bugs">
+      <created>1599549068317</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1599549068317</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,7 +132,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="filterByImage and filterByType is ready" />
     <MESSAGE value="filterByImage and filterByType is ready&#10;searching is ready" />
-    <option name="LAST_COMMIT_MESSAGE" value="filterByImage and filterByType is ready&#10;searching is ready" />
+    <MESSAGE value="filters is ready for review&#10;&#10;fix typescript bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="filters is ready for review&#10;&#10;fix typescript bugs" />
   </component>
   <component name="WindowStateProjectService">
     <state x="551" y="275" key="#ESLint" timestamp="1599294660700">
@@ -139,14 +144,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="430" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1599544942006" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1599548988812">
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1599549111328">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1599548988812" />
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1599549111328" />
     <state x="184" y="9" key="SettingsEditor" timestamp="1598633735944">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1598633735944" />
+    <state x="275" y="84" key="Vcs.Push.Dialog.v2" timestamp="1599549073308">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="84" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1599549073308" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1599290483082">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
