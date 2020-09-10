@@ -6,9 +6,8 @@ html {
   color: gray !important;
 }
 
-.makeStyles-root-9 {
-  justify-content: center;
-  margin: 40px 0;
+.MuiPaper-root {
+  width: 100%;
 }
 
 .App {
@@ -25,6 +24,7 @@ html {
     text-align: center;
     gap: 20px;
     color: #fff;
+    margin-top: 20px;
   }
 
   &__button-container {
@@ -58,6 +58,11 @@ html {
     outline: none;
     padding-top: 27px;
     box-sizing: border-box;
+    font-size: 16px;
+  }
+
+  &__search::placeholder {
+    color: gray;
   }
 }
 

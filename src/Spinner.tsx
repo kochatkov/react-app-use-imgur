@@ -5,10 +5,12 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
+    justifyContent: 'center',
+    margin: '40px 0',
     '& > * + *': {
       marginLeft: theme.spacing(2),
     },
-  },
+},
 }));
 
 const CircularIndeterminate = () => {

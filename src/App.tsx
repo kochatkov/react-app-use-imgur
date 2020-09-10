@@ -5,9 +5,10 @@ import { Photo, Data } from './interfaces/Photo';
 import CircularIndeterminate from './Spinner';
 import CheckboxSelect from './components/CheckboxSelect';
 import MultipleSelect from './components/MultipleSelect';
+import MultipleSelectChoice from './components/MultipleSelectChoice';
 import debounce from 'lodash/debounce';
 import { getPhotos, GetPhotosOptions } from './api/pixabay';
-import { Select } from '@material-ui/core';
+
 
 function App() {
   const [loading, setLoading] = useState<boolean>(true);
@@ -59,6 +60,11 @@ function App() {
     updateSearchingApi({ ...option, page: 1, q: value });
   };
 
+  const filteringByEditorsChoice = (values: string[]) => {
+    // eslint-disable-next-line @typescript-eslint/camelcase
+    requestApi({ ...option, page: 1, editors_choice: values })
+  }
+
   const filterImageByType = (types: string[]) => {
     // eslint-disable-next-line @typescript-eslint/camelcase
     requestApi({ ...option, page: 1, image_type: types.join(',') });
@@ -69,7 +75,8 @@ function App() {
       <div className="App__selects">
         <CheckboxSelect filterImageByType={filterImageByType} disabled={loading} />
         <MultipleSelect filterImageByCategory={filterImageByCategory} disabled={loading} />
-        <input type="text" className="App__search" onChange={searchingFilter} disabled={loading} />
+        <MultipleSelectChoice filteringByEditorsChoice={filteringByEditorsChoice} disabled={loading} />
+        <input type="text" className="App__search" onChange={searchingFilter} disabled={loading} placeholder="Search" />
       </div>
       <div className="App__cards">
         {error && <div>{error.message}</div>}
