@@ -6,10 +6,10 @@ export interface GetPhotosOptions {
     page: number;
     image_type?: string;
     q?: string;
-    editors_choice?: string[];
+    editors_choice?: string;
     category?: string;
 }
 
 export const getPhotos = (options: GetPhotosOptions) => {
-   return fetch(`${API_URL}&options=${stringify(options)}`).then(res => res.json())
+   return fetch(`${API_URL}&${stringify(options)}`).then(res => res.json())
 }

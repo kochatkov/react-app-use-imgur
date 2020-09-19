@@ -10,11 +10,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8504d740-ced1-4865-814b-49f4006cc022" name="Default Changelist" comment="filters is ready for review&#10;&#10;fix typescript bugs">
+    <list default="true" id="8504d740-ced1-4865-814b-49f4006cc022" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Spinner.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Spinner.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/pixabay.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/pixabay.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,6 +97,10 @@
       <workItem from="1599285985292" duration="16030000" />
       <workItem from="1599543513217" duration="5489000" />
       <workItem from="1599631616744" duration="5785000" />
+      <workItem from="1600184641749" duration="257000" />
+      <workItem from="1600185038018" duration="1555000" />
+      <workItem from="1600240615188" duration="56000" />
+      <workItem from="1600495892185" duration="2363000" />
     </task>
     <task id="LOCAL-00001" summary="filterByImage and filterByType is ready">
       <created>1599294376081</created>
@@ -153,10 +156,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="430" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1599717336287" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1599549111328">
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1600240670144">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1599549111328" />
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1600240670144" />
     <state x="184" y="9" key="SettingsEditor" timestamp="1599717929272">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

@@ -19,6 +19,7 @@ function App() {
   const requestApi = (option: GetPhotosOptions, isAppend?: boolean) => {
     setOption(option);
     setLoading(true);
+
     getPhotos(option)
       .then((data) => {
         setPhotos(isAppend ? [...photos, ...data.hits] : data.hits);
@@ -37,6 +38,7 @@ function App() {
   const loadMore = () => {
     requestApi({ ...option, page: option.page + 1 }, true);
   };
+
 
   const filterImageByCategory = (categories: string[]) => {
     requestApi({ ...option, page: 1, category: categories.join(',') });
@@ -62,7 +64,7 @@ function App() {
 
   const filteringByEditorsChoice = (values: string[]) => {
     // eslint-disable-next-line @typescript-eslint/camelcase
-    requestApi({ ...option, page: 1, editors_choice: values })
+    requestApi({ ...option, page: 1, editors_choice: values.join(',') })
   }
 
   const filterImageByType = (types: string[]) => {
